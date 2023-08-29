@@ -10,13 +10,13 @@ public class BasePage {
 
     protected static final String URL= "https://www.list.am/";
 
-    private String endPoint;
+    private String newUrl;
 
     protected WebDriver driver;
 
     public BasePage(WebDriver driver, String endpoint) {
         this.driver = driver;
-        this.endPoint = endpoint;
+        this.newUrl = endpoint;
         PageFactory.initElements(driver, this);
     }
 

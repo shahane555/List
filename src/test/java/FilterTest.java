@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class FilterTest extends DriverSetup {
-
     SearchResultsPage searchResultsPage;
 
     @Test

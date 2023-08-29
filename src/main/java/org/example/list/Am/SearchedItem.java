@@ -9,8 +9,8 @@ public class SearchedItem extends MainElement {
 
     WebDriver driver;
 
-    public SearchedItem(WebElement element, WebDriver driver) {
-        super(element);
+    public SearchedItem(WebElement e, WebDriver driver) {
+        super(e);
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
