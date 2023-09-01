@@ -7,16 +7,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class BasePage {
-
-    protected static final String URL= "https://www.list.am/";
-
-    private String newUrl;
+    private String endPoint;
+    protected static final String URL = "https://www.list.am/";
 
     protected WebDriver driver;
 
-    public BasePage(WebDriver driver, String endpoint) {
+    public BasePage(WebDriver driver, String endPoint) {
         this.driver = driver;
-        this.newUrl = endpoint;
+        this.endPoint = endPoint;
         PageFactory.initElements(driver, this);
     }
 
@@ -27,7 +25,6 @@ public class BasePage {
     public void open() {
         driver.get(URL);
     }
-
 
     public BasePage(WebDriver driver, Actions action, WebDriverWait wait) {
         this.driver = driver;

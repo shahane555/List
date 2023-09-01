@@ -29,7 +29,7 @@ public class DriverSetup {
     }
 
     @AfterClass
-    public void closePage() {
+    public void closeListAmSite() {
         if (driver != null) {
             driver.quit();
         }
