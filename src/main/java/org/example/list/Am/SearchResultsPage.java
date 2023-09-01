@@ -11,8 +11,8 @@ public class SearchResultsPage extends BasePage {
 
     private final By item = By.xpath("//div[@class='gl']//a[@class='h']");
 
-    public SearchResultsPage(WebDriver driver, String endPoint) {
-        super(driver, endPoint);
+    public SearchResultsPage(WebDriver driver, String newUrl) {
+        super(driver, newUrl);
     }
 
     public List<SearchedItem> getAllSearchedItems() {

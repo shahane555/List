@@ -4,8 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WrapsElement;
 
 public class MainElement implements WrapsElement {
-    public MainElement(WebElement element) {
-        this.element = element;
+    public MainElement(WebElement e) {
+        e = element;
     }
 
     protected WebElement element;

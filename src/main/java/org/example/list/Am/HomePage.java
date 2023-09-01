@@ -14,11 +14,11 @@ public class HomePage extends BasePage {
         super(driver, action, wait);
     }
 
-    String langLocatorText = "//div[@class='bar']//a/div[text()='%s']";
+    String languageLocatorText = "//div[@class='bar']//a/div[text()='%s']";
 
     public void selectLanguage(String language) {
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        By langLocator = By.xpath(String.format(langLocatorText, language));
+        By langLocator = By.xpath(String.format(languageLocatorText, language));
         wait.until(ExpectedConditions.elementToBeClickable(langLocator));
         driver.findElement(langLocator).click();
     }
