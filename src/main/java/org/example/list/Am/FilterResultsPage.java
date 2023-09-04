@@ -7,20 +7,20 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchResultsPage extends BasePage {
+public class FilterResultsPage extends BasePage {
 
     private final By item = By.xpath("//div[@class='gl']//a[@class='h']");
 
-    public SearchResultsPage(WebDriver driver, String newUrl) {
-        super(driver, newUrl);
+    public FilterResultsPage(WebDriver driver, String endPoint) {
+        super(driver, endPoint);
     }
 
-    public List<SearchedItem> getAllSearchedItems() {
-        List<SearchedItem> allSearchedItems = new ArrayList<>();
+    public List<FilteredItem> getAllSearchedItems() {
+        List<FilteredItem> allFilteredItems = new ArrayList<>();
         List<WebElement> elements = driver.findElements(item);
         for(WebElement e : elements) {
-            allSearchedItems.add(new SearchedItem(e, driver));
+            allFilteredItems.add(new FilteredItem(e, driver));
         }
-        return allSearchedItems;
+        return allFilteredItems;
     }
 }

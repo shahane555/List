@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SearchedItem extends MainElement {
+public class FilteredItem extends BaseElement {
 
     WebDriver driver;
 
-    public SearchedItem(WebElement e, WebDriver driver) {
+    public FilteredItem(WebElement e, WebDriver driver) {
         super(e);
         this.driver = driver;
         PageFactory.initElements(driver, this);
